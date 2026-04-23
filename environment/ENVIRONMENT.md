@@ -18,7 +18,7 @@ conda create -n ida_inpformer python=3.8 -y
 conda activate ida_inpformer
 
 pip install --upgrade pip
-pip install -r environment/requirements_inp_former_from_venv.txt
+pip install -r environment/requirements_inp_former.txt
 ```
 
 ```text
