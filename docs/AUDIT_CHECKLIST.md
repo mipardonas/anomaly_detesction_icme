@@ -43,8 +43,7 @@
 
 - `environment/ENVIRONMENT.md`
 - `environment/requirements_inp_former.txt`
-- `environment/requirements_rt_detrv4_full.txt`
-- `environment/requirements_rt_detrv4_noflash.txt`
+- `environment/requirements_rt_detrv4.txt`
 
 ## 6. Run Commands
 

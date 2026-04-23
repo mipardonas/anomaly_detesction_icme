@@ -20,21 +20,26 @@ The final submitted method uses two models:
 
 The final detector config is:
 
+```text
 RT-DETRv4/configs/rtv4/rtv4_hgnetv2_s_7classes_anomaly_guided.yml
+```
 
 Important fields:
 
+```yaml
 num_classes: 7
 remap_mscoco_category: False
 HybridEncoder.anomaly_guided: True
 HybridEncoder.anomaly_fusion_weight: 0.5
 HybridEncoder.anomaly_residual_weight: 0.25
 HybridEncoder.anomaly_map_minmax_norm: True
+```
 
 Before official reproduction, update the dataset and heatmap paths in the config.
 
 ## Final Inference Parameters
 
+```yaml
 conf_thres: 0.03
 pre_nms_topk: 100
 nms_iou_thres: 0.30
@@ -47,12 +52,15 @@ proposal_topk: 10
 proposal_score_scale: 0.60
 proposal_append_iou: 0.15
 proposal_fusion_nms_iou: 0.30
+```
 
 ## Official Metric
 
 The Track 1 metric implementation is included at:
 
+```text
 RT-DETRv4/caculate_metric2.py
+```
 
 ## Files Not Included
 

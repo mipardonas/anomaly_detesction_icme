@@ -10,6 +10,7 @@ This package collects the code and instructions needed to reproduce the final su
 
 ## Directory Layout
 
+```text
 IDA2026_official_audit_package/
   INP-Former/              # INP-Former training, heatmap generation, and model code
   RT-DETRv4/               # RT-DETRv4s training, inference, config, model code, and metric code
@@ -17,6 +18,7 @@ IDA2026_official_audit_package/
   scripts/                 # reproducible command templates
   weights/                 # placeholder directory for weights copied by the user
   docs/                    # optional extra notes
+```
 
 ## What Is Included
 
@@ -37,8 +39,7 @@ IDA2026_official_audit_package/
 - Environment setup:
   - `environment/ENVIRONMENT.md`
   - `environment/requirements_inp_former.txt`
-  - `environment/requirements_rt_detrv4_full.txt`
-  - `environment/requirements_rt_detrv4_noflash.txt`
+  - `environment/requirements_rt_detrv4.txt`
 - Reproduction scripts:
   - `scripts/01_train_inp_former.sh`
   - `scripts/02_export_inp_heatmaps.sh`
@@ -48,12 +49,10 @@ IDA2026_official_audit_package/
 ## Recommended Reproduction Order
 
 1. Create the INP-Former environment using `environment/ENVIRONMENT.md`.
-2. Copy the INP-Former checkpoint into `weights/inp_former/`.
-3. Run or inspect `scripts/01_train_inp_former.sh` for the normal-image training stage.
-4. Run `scripts/02_export_inp_heatmaps.sh` to export `.npy` heatmaps for train, val, and test splits.
-5. Create the RT-DETRv4 environment using `environment/ENVIRONMENT.md`.
-6. Copy COCO-pretrained RT-DETRv4s weights and the final trained RT-DETRv4s checkpoint into `weights/rtdetrv4/`.
-7. Run `scripts/03_train_rtdetrv4s.sh` to reproduce detector training.
-8. Run `scripts/04_infer_rtdetrv4s.sh` to reproduce final inference.
+2. Run or inspect `scripts/01_train_inp_former.sh` for the normal-image training stage.
+3. Run `scripts/02_export_inp_heatmaps.sh` to export `.npy` heatmaps for train, val, and test splits.
+4. Create the RT-DETRv4 environment using `environment/ENVIRONMENT.md`.
+5. Run `scripts/03_train_rtdetrv4s.sh` to reproduce detector training.
+6. Run `scripts/04_infer_rtdetrv4s.sh` to reproduce final inference.
 
 All dataset paths in scripts are placeholders. Replace them with the official dataset location used by the reviewer.
