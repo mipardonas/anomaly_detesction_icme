@@ -2,11 +2,11 @@
 
 This package collects the code and instructions needed to reproduce the final submitted pipeline:
 
-1. train INP-Former on normal training images;
-2. export anomaly heatmaps for train/val/test images as `.npy` files;
-3. train anomaly-guided RT-DETRv4s on RGB images plus heatmaps;
-4. run RT-DETRv4s inference with anomaly-map proposals and NMS;
-5. generate the final challenge-format predictions.
+1. Train INP-Former on normal training images;
+2. Export anomaly heatmaps for train/val/test images as `.npy` files;
+3. Train anomaly-guided RT-DETRv4s on RGB images plus heatmaps;
+4. Run RT-DETRv4s inference with anomaly-map proposals and NMS;
+5. Generate the final challenge-format predictions.
 
 ## Directory Layout
 
